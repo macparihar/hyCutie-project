@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Oh no! 😅</h1>
+  <p>
+    Maybe next time,
+    <strong>{{ name }}</strong>
+    We'll catch up later! 👋
+  </p>
+
+  <!-- Text Area for User's Reason -->
+  <div class="reason-section">
+    <h3>Tell me why you chose "NO"</h3>
+    <textarea [(ngModel)]="reason" placeholder="Enter your reason here..."></textarea>
+    <button (click)="submitReason()">Submit</button>
+  </div>
+
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Enter Your Name</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Enter your name" required>
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Confirm</button>
+    </form>
+  </div>
+  

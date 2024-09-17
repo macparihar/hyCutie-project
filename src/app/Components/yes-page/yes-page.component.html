@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Awesome! 🎉</h1>
+  <p>
+    Glad we can talk, <strong>{{ name }}</strong
+    >! Let's get started! 😄
+  </p>
+
+  <!-- Text Area for User's Reason -->
+  <div class="reason-section">
+    <h3>Tell me why you chose "YES"</h3>
+    <textarea
+      [(ngModel)]="reason"
+      placeholder="Enter your reason here..."
+    ></textarea>
+    <button (click)="submitReason()">Submit</button>
+  </div>
+</div>
