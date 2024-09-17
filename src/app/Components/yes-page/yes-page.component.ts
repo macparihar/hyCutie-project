@@ -20,9 +20,11 @@ export class YesPageComponent implements OnInit {
   }
 
   submitReason(): void {
-    const emailMessage = `User ${this.name} chose YES and their reason is: ${this.reason}`;
-    this.emailService.sendEmail('your-email@example.com', 'User Feedback: YES', emailMessage);
-    console.log('User reason for YES:', this.reason);
+    if (this.reason.trim()) {
+      this.emailService.sendEmail(this.name || 'User', this.reason)
+    } else {
+      console.error('Reason cannot be empty');
+    }
   }
 
 }

@@ -10,7 +10,11 @@
   <div class="reason-section">
     <h3>Tell me why you chose "NO"</h3>
     <textarea [(ngModel)]="reason" placeholder="Enter your reason here..."></textarea>
-    <button (click)="submitReason()">Submit</button>
+     <!-- Disable button while loading -->
+     <button (click)="submitReason()" >Submit</button>
+
+   
+   
   </div>
 
 </div>

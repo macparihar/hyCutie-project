@@ -22,7 +22,7 @@ import { filter } from 'rxjs';
   ],
 })
 export class AppComponent {
-  title = 'hyCutie';
+  title = 'hyCutie' || 'Hy {{name}}';
   animationState = 'fade';
 
   constructor(private router: Router) {

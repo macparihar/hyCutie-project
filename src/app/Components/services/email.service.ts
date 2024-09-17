@@ -6,16 +6,18 @@ import emailjs from 'emailjs-com';
 })
 export class EmailService {
 
-  private serviceID = 'YOUR_SERVICE_ID';
-  private templateID = 'YOUR_TEMPLATE_ID';
-  private userID = 'YOUR_USER_ID';
+  private serviceID = 'service_yks9qyd';
+  private templateID = 'template_whmx1as';
+  private userID = '2mFhDd4fQB4xgud4H';
+  
+
+
 
   constructor() { }
-  sendEmail(toEmail: string, subject: string, message: string): void {
+  sendEmail(name: string, reason: string): void {
     const templateParams = {
-      to_email: toEmail,
-      subject: subject,
-      message: message
+      from_name: name,
+      message: reason,
     };
 
     emailjs.send(this.serviceID, this.templateID, templateParams, this.userID)
